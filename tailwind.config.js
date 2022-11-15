@@ -65,9 +65,24 @@ module.exports = {
           "monospace",
         ],
       },
+      fontWeight: {
+        bold: 700,
+      },
     },
     colors: {
       ...colors,
+      green: {
+        ...colors.green,
+        DEFAULT: "#27AE60",
+      },
+      naturals: {
+        ...colors.neutral,
+        900: "#222222",
+      },
+      gray: {
+        ...colors.gray,
+        DEFAULT: "#454545",
+      },
     },
   },
 };
