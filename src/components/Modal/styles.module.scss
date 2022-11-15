@@ -1,0 +1,55 @@
+.modal {
+  @apply fixed top-0 left-0 z-10 w-full overflow-y-auto;
+  &Overlay {
+    @apply fixed inset-0 transition-opacity;
+    &DarkBg {
+      @apply absolute inset-0 bg-[#00000061];
+    }
+  }
+  &Container {
+    @apply flex h-screen items-center justify-center;
+  }
+  &Card {
+    @apply inline-flex transform flex-col justify-between overflow-hidden rounded-lg bg-gray-lightest shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:align-middle;
+    box-shadow: 0px 3px 8px -1px rgba(50, 50, 71, 0.05), 0px 0px 1px rgba(12, 26, 75, 0.24);
+    min-height: 440px;
+
+    &Header {
+      @apply flex items-center justify-between rounded-lg bg-white px-6;
+      box-shadow: 0px 3px 8px -1px rgba(50, 50, 71, 0.05), 0px 0px 1px rgba(12, 26, 75, 0.24);
+      height: 48px;
+      span {
+        @apply text-base font-extrabold text-naturals-900;
+      }
+      button {
+        @apply h-9 w-9 text-gray;
+      }
+    }
+    &Body {
+      @apply px-6 py-4;
+      form {
+        @apply flex flex-col gap-3;
+      }
+      div {
+        @apply flex flex-col;
+      }
+      label {
+        @apply text-xs font-bold text-gray;
+      }
+      input,
+      textarea {
+        @apply mt-3 rounded-md border border-[#EEEEEE] bg-white px-4 py-3 text-sm font-normal outline-none;
+        box-shadow: 0px 3px 8px -1px rgba(50, 50, 71, 0.05), 0px 0px 1px rgba(12, 26, 75, 0.24);
+      }
+
+      textarea {
+        resize: none;
+        height: 164px;
+        box-sizing: border-box;
+      }
+    }
+    &Actions {
+      @apply flex items-center justify-end px-6 py-6;
+    }
+  }
+}
