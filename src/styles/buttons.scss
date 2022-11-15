@@ -7,3 +7,12 @@
     }
   }
 }
+
+.btnBordered {
+  background: transparent;
+  border: 1px solid;
+  @apply px-2 py-1;
+  &Green {
+    @apply border-green text-green;
+  }
+}
