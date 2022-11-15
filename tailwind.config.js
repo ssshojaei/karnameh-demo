@@ -82,6 +82,9 @@ module.exports = {
       gray: {
         ...colors.gray,
         DEFAULT: "#454545",
+        lightest: "#F9F9F9",
+        dark: "#777777",
+        light: "#9CAEBB",
       },
     },
   },
