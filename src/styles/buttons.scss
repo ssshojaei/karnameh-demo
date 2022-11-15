@@ -1,0 +1,9 @@
+.btn {
+  @apply flex items-center justify-center gap-2 whitespace-nowrap rounded-lg py-1 px-6 text-base font-bold transition-all;
+  &Green {
+    @apply bg-green text-white;
+    &:hover {
+      @apply bg-green-700;
+    }
+  }
+}

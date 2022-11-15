@@ -1,0 +1,24 @@
+.header {
+  @apply flex h-[68px] flex-nowrap overflow-hidden bg-white;
+  box-shadow: 0px 3px 50px -1px rgba(50, 50, 71, 0.05);
+}
+
+.right {
+  @apply flex-1;
+  .title {
+    @apply text-2xl font-bold text-naturals-900 sm:text-4xl;
+  }
+}
+
+.left {
+  @apply flex flex-1 justify-end;
+  .profile {
+    @apply mr-10 hidden cursor-pointer items-center gap-2 whitespace-nowrap sm:flex;
+    img {
+      border-radius: 50%;
+    }
+    span {
+      @apply text-lg font-bold text-gray;
+    }
+  }
+}

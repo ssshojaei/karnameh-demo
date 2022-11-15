@@ -1,3 +1,4 @@
+import { Header } from "components/layout";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
@@ -11,7 +12,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex h-[100vh] items-center justify-center">
+      <main>
+        <Header />
         <span>Hello World!</span>
       </main>
     </>
