@@ -1,11 +1,13 @@
 import Image from "next/image";
 import React from "react";
-import { PlusIcon, TriangleIcon } from "./icons";
+import { PlusIcon, TriangleIcon } from "../icons";
 import styles from "./styles.module.scss";
 
-type IHeader = {};
+type IHeader = {
+  handleCreateAsk: () => void;
+};
 
-const Header = ({}: IHeader) => {
+const Header = ({ handleCreateAsk }: IHeader) => {
   return (
     <header className={styles.header}>
       <div className="container flex items-center">
@@ -13,7 +15,7 @@ const Header = ({}: IHeader) => {
           <h1 className={styles.title}>لیست سوالات</h1>
         </div>
         <div className={styles.left}>
-          <button className="btn btnGreen">
+          <button onClick={handleCreateAsk} className="btn btnGreen">
             <PlusIcon />
             <span>سوال جدید</span>
           </button>
