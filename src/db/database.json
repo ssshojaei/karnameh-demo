@@ -123,6 +123,29 @@
           }
         }
       ]
+    },
+    {
+      "title": "تست json-server",
+      "body": "به نظر خیلی چیز جالبی میاد",
+      "date": "2022-04-25 20:10:00",
+      "user": {
+        "avatar": "https://picsum.photos/32",
+        "name": "Saleh"
+      },
+      "solutions": [
+        {
+          "id": 1,
+          "body": "متغیر ENV رو توی فایلت تغییر بده درست میشه",
+          "like": 10,
+          "dislike": 12,
+          "date": "2022-01-15 00:00:00",
+          "user": {
+            "avatar": "https://picsum.photos/32",
+            "name": "Ali"
+          }
+        }
+      ],
+      "id": 4
     }
   ]
 }
