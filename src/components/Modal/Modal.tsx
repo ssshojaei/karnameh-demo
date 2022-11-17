@@ -30,11 +30,11 @@ const Modal = ({ isOpen = true, onClose }: IModal) => {
             <form>
               <div>
                 <label>موضوع</label>
-                <input defaultValue="مشکل در اجرای کد" />
+                <input className="form-control" defaultValue="مشکل در اجرای کد" />
               </div>
               <div>
                 <label>موضوع</label>
-                <textarea defaultValue="مشکل در اجرای کد" />
+                <textarea className="form-control textarea" defaultValue="مشکل در اجرای کد" />
               </div>
             </form>
           </div>
