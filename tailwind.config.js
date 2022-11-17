@@ -1,4 +1,5 @@
 const colors = require("tailwindcss/colors");
+const { fontFamily } = require("tailwindcss/defaultTheme");
 
 module.exports = {
   content: [
@@ -36,34 +37,7 @@ module.exports = {
         DEFAULT: "250ms",
       },
       fontFamily: {
-        sans: [
-          "Vazirmatn",
-          "ui-sans-serif",
-          "system-ui",
-          "-apple-system",
-          "BlinkMacSystemFont",
-          '"Segoe UI"',
-          "Roboto",
-          '"Helvetica Neue"',
-          "Arial",
-          '"Noto Sans"',
-          "sans-serif",
-          '"Apple Color Emoji"',
-          '"Segoe UI Emoji"',
-          '"Segoe UI Symbol"',
-          '"Noto Color Emoji"',
-        ],
-        serif: ["ui-serif", "Georgia", "Cambria", '"Times New Roman"', "Times", "serif"],
-        mono: [
-          "ui-monospace",
-          "SFMono-Regular",
-          "Menlo",
-          "Monaco",
-          "Consolas",
-          '"Liberation Mono"',
-          '"Courier New"',
-          "monospace",
-        ],
+        sans: ["var(--font-iranYekan)", ...fontFamily.sans],
       },
       fontWeight: {
         bold: 700,
