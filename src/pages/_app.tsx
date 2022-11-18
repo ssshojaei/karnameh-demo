@@ -1,22 +1,24 @@
 import "../styles/globals.scss";
 import type { AppProps } from "next/app";
 import localFont from "@next/font/local";
-import { Inter } from "@next/font/google";
-
-// const myFont = localFont({ src: "./my-font.woff2" });
-// const myFont = localFont({
-//   src: "../assets/fonts/Yekan.woff",
-// });
+import { wrapper } from "../store/store";
+import { Provider } from "react-redux";
 
 const myFont = localFont({
   src: "../assets/fonts/Yekan.woff",
   variable: "--font-iranYekan",
 });
 
-export default function App({ Component, pageProps }: AppProps) {
+const App = ({ Component, ...rest }: AppProps) => {
+  const { store, props } = wrapper.useWrappedStore(rest);
+  const { pageProps } = props;
   return (
-    <main className={`${myFont.variable} font-sans`}>
-      <Component {...pageProps} />
-    </main>
+    <Provider store={store}>
+      <main className={`${myFont.variable} font-sans`}>
+        <Component {...pageProps} />
+      </main>
+    </Provider>
   );
-}
+};
+
+export default App;

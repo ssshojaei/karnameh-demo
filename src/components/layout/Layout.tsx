@@ -11,10 +11,10 @@ const Layout = ({ title, children }: ILayout) => {
   const handleToggle = () => setIsOpen((prev) => !prev);
 
   return (
-    <main>
+    <>
       <Header title={title} handleToggle={handleToggle} isOpen={isOpen} />
-      <section className="container mt-3">{children}</section>
-    </main>
+      <section className="container my-3">{children}</section>
+    </>
   );
 };
 
